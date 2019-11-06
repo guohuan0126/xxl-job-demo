@@ -3,11 +3,4 @@
 /LICENSE
 /NOTICE
 *.iml
-将删除 xxl-job-admin/target/
-将删除 xxl-job-core/target/
-将删除 xxl-job-executor/target/
-将删除 xxl-job-admin/target/generated-sources/
-将删除 xxl-job-admin/target/generated-test-sources/
-将删除 xxl-job-core/target/generated-sources/
-将删除 xxl-job-core/target/generated-test-sources/
-将删除 xxl-job-executor/target/generated-sources/
+
