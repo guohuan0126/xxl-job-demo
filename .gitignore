@@ -2,6 +2,7 @@
 /.idea/
 /LICENSE
 /NOTICE
+*.iml
 将删除 xxl-job-admin/target/
 将删除 xxl-job-core/target/
 将删除 xxl-job-executor/target/
