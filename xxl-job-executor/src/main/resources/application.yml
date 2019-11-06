@@ -1,0 +1,28 @@
+# web port
+server:
+  port: 8082
+
+# log config
+logging:
+  config: classpath:logback.xml
+
+
+### xxl-job admin address list, such as "http://address" or "http://address01,http://address02"
+xxl:
+  job:
+    admin:
+      addresses: http://127.0.0.1:8080/xxl-job-admin
+
+### xxl-job executor address
+    executor:
+      appname: xxl-job-executor-sample
+      ip:
+      port: 8888
+      ### xxl-job log path
+      logpath: /Users/irving/logs/xxl-job/
+      ### xxl-job log retention days
+      logretentiondays: -1
+### xxl-job, access token
+    accessToken:
+
+
