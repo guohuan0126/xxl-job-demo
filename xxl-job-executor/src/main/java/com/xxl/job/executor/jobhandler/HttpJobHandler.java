@@ -18,7 +18,7 @@ import org.springframework.stereotype.Component;
 public class HttpJobHandler extends IJobHandler {
 
     @Override
-    public ReturnT<String> execute(String param) throws Exception {
+    public ReturnT<String> execute(String param) {
 
         String url = "http://localhost:14005/api/v1/common/tc/get";
         Response response = HttpUtil.sendGet(url, Maps.<String, Object>newHashMap());

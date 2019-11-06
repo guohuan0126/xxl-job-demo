@@ -21,13 +21,13 @@ public class CommandJobHandler extends IJobHandler {
 
     @Override
     public ReturnT<String> execute(String param) throws Exception {
-        String command = param;
         int exitValue = -1;
 
         BufferedReader bufferedReader = null;
         try {
             // command process
-            Process process = Runtime.getRuntime().exec(command);
+            Process process;
+            process = Runtime.getRuntime().exec(param);
             BufferedInputStream bufferedInputStream = new BufferedInputStream(process.getInputStream());
             bufferedReader = new BufferedReader(new InputStreamReader(bufferedInputStream));
 
@@ -51,7 +51,7 @@ public class CommandJobHandler extends IJobHandler {
         if (exitValue == 0) {
             return IJobHandler.SUCCESS;
         } else {
-            return new ReturnT<String>(IJobHandler.FAIL.getCode(), "command exit value("+exitValue+") is failed");
+            return new ReturnT<>(IJobHandler.FAIL.getCode(), "command exit value("+exitValue+") is failed");
         }
     }
 
